@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "92d15e0a-612b-4cc4-a998-fc8f2362db08",
+		"name": "Wally API Exchange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31816792"
+	},
+	"item": [
+		{
+			"name": "Exchange Rate PEN - USD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/exchanges?amount=20.00&sourceCurrency=PEN&targetCurrency=USD",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"exchanges"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "20.00"
+						},
+						{
+							"key": "sourceCurrency",
+							"value": "PEN"
+						},
+						{
+							"key": "targetCurrency",
+							"value": "USD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exchange Rate Not Found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/exchanges?amount=20.00&sourceCurrency=COP&targetCurrency=USD",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"exchanges"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "20.00"
+						},
+						{
+							"key": "sourceCurrency",
+							"value": "COP"
+						},
+						{
+							"key": "targetCurrency",
+							"value": "USD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
